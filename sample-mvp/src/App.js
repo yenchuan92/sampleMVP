@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar/Navbar";
+import DataTable from "./DataTable/DataTable";
+import { Box } from "@mui/material";
+// import { ThemeProvider } from "@mui/material";
+// import theme from "./theme";
+
+const mockNavbarData = [
+  { name: "Function 1" },
+  { name: "Function 2" },
+  { name: "Function 3" },
+  { name: "Function 4" },
+  { name: "Function 5" },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <ThemeProvider theme={theme}>
+    <Box display="flex">
+      <Navbar data={mockNavbarData} />
+      <DataTable />
+    </Box>
+    // </ThemeProvider>
   );
 }
 
